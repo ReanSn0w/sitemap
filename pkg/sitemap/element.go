@@ -34,7 +34,7 @@ func (el Element) Body(ctx context.Context) view.View {
 	return xml.NewNode(false, "url", nil)(
 		xml.NewNode(true, "loc", nil)(xml.Url(el.Location)),
 		xml.NewNode(true, "lastmod", nil)(xml.String(el.LastModified.Format("2006-01-02T15:04:05-07:00"))),
-		xml.NewNode(true, "chandefreq", nil)(xml.String(el.Changefreq)),
+		xml.NewNode(true, "changefreq", nil)(xml.String(el.Changefreq)),
 		xml.NewNode(true, "priority", nil)(xml.String("%v", el.Priority)),
 	)
 }
